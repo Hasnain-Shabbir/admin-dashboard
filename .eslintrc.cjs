@@ -3,23 +3,27 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['airbnb'],
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   overrides: [
     {
       env: {
         node: true,
       },
-      files: ['.eslintrc.{js,cjs}'],
+      files: [".eslintrc.{js,cjs}"],
       parserOptions: {
-        sourceType: 'script',
+        sourceType: "script",
       },
     },
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
+  plugins: ["react"],
   rules: {
-    'no-unused-vars': 'warn',
+    "linebreak-style": ["error", "unix"],
+    quotes: ["error", "double"],
+    semi: ["error", "always"],
+    "no-unused-vars": "warn",
   },
 };

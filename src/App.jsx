@@ -1,8 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
-import './App.css';
+import { Home } from "./pages";
 
 function App() {
-  return <div>Hello my admin</div>;
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 }
 
 export default App;
