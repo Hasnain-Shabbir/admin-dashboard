@@ -1,12 +1,15 @@
 import React from "react";
-import { Sidebar } from "../../components";
+import { Sidebar, Navbar } from "../../components";
 import "./home.scss";
 
 const Home = () => {
   return (
     <section className="home">
       <Sidebar />
-      <div className="homeContainer">Home Page</div>
+      <div className="homeContainer">
+        <Navbar />
+        Home Page
+      </div>
     </section>
   );
 };
