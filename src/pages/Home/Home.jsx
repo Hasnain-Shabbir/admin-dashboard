@@ -1,5 +1,5 @@
 import React from "react";
-import { Sidebar, Navbar } from "../../components";
+import { Sidebar, Navbar, Widget } from "../../components";
 import "./home.scss";
 
 const Home = () => {
@@ -8,7 +8,12 @@ const Home = () => {
       <Sidebar />
       <div className="homeContainer">
         <Navbar />
-        Home Page
+        <div className="widgets">
+          <Widget type="user" />
+          <Widget type="order" />
+          <Widget type="earning" />
+          <Widget type="balance" />
+        </div>
       </div>
     </section>
   );
