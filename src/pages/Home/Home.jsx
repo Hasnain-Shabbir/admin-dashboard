@@ -1,5 +1,5 @@
 import React from "react";
-import { Sidebar, Navbar, Widget } from "../../components";
+import { Sidebar, Navbar, Widget, Featured, Chart } from "../../components";
 import "./home.scss";
 
 const Home = () => {
@@ -13,6 +13,10 @@ const Home = () => {
           <Widget type="order" />
           <Widget type="earning" />
           <Widget type="balance" />
+        </div>
+        <div className="charts">
+          <Featured />
+          <Chart />
         </div>
       </div>
     </section>
