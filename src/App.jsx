@@ -1,11 +1,16 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { CreateNew, Home, List, User } from "./pages";
+import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
+import { CreateNew, Home, List, User } from "./pages";
 import { userInputs, productInputs } from "../formSource";
+import { ThemeContext } from "./context/ThemeContext";
+import "./styles/dark.scss";
 
 function App() {
+  const { darkMode } = useContext(ThemeContext);
+
   return (
-    <div>
+    <div className={darkMode ? "app dark" : "app"}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="users">
