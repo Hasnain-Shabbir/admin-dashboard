@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { Home, List, User } from "./pages";
+import { CreateNew, Home, List, User } from "./pages";
 import { Routes, Route } from "react-router-dom";
+import { userInputs, productInputs } from "../formSource";
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
         <Route path="users">
           <Route index element={<List />} />
           <Route path=":userId" element={<User />} />
+          <Route
+            path="create"
+            element={<CreateNew inputs={userInputs} title="Add New User" />}
+          />
         </Route>
       </Routes>
     </div>
