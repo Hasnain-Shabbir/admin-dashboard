@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { sidebarData } from "./sidebarData";
 import "./sidebar.scss";
 
@@ -6,9 +7,9 @@ const Navbar = () => {
   return (
     <nav className="sidebar">
       <div className="top">
-        <a href="#" className="logo">
+        <Link to="/" className="logo">
           MyAdmin
-        </a>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -17,8 +18,10 @@ const Navbar = () => {
           <ul>
             {sidebarData.main.map((item) => (
               <li key={item.id}>
-                <span className="icon">{item.icon}</span>
-                <span>{item.title}</span>
+                <Link to={item.link} className="link">
+                  <span className="icon">{item.icon}</span>
+                  <span>{item.title}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -28,8 +31,10 @@ const Navbar = () => {
           <ul>
             {sidebarData.lists.map((item) => (
               <li key={item.id}>
-                <span className="icon">{item.icon}</span>
-                <span>{item.title}</span>
+                <Link to={item.link} className="link">
+                  <span className="icon">{item.icon}</span>
+                  <span>{item.title}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -39,8 +44,10 @@ const Navbar = () => {
           <ul>
             {sidebarData.useful.map((item) => (
               <li key={item.id}>
-                <span className="icon">{item.icon}</span>
-                <span>{item.title}</span>
+                <Link to={item.link} className="link">
+                  <span className="icon">{item.icon}</span>
+                  <span>{item.title}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -50,8 +57,10 @@ const Navbar = () => {
           <ul>
             {sidebarData.service.map((item) => (
               <li key={item.id}>
-                <span className="icon">{item.icon}</span>
-                <span>{item.title}</span>
+                <Link to={item.link} className="link">
+                  <span className="icon">{item.icon}</span>
+                  <span>{item.title}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -61,8 +70,10 @@ const Navbar = () => {
           <ul>
             {sidebarData.user.map((item) => (
               <li key={item.id}>
-                <span className="icon">{item.icon}</span>
-                <span>{item.title}</span>
+                <Link to={item.link} className="link">
+                  <span className="icon">{item.icon}</span>
+                  <span>{item.title}</span>
+                </Link>
               </li>
             ))}
           </ul>

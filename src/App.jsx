@@ -16,6 +16,16 @@ function App() {
             element={<CreateNew inputs={userInputs} title="Add New User" />}
           />
         </Route>
+        <Route path="products">
+          <Route index element={<List />} />
+          <Route path=":productId" element={<User />} />
+          <Route
+            path="create"
+            element={
+              <CreateNew inputs={productInputs} title="Add New Product" />
+            }
+          />
+        </Route>
       </Routes>
     </div>
   );

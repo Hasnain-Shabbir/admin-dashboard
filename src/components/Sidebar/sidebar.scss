@@ -36,26 +36,28 @@
 
     ul {
       li {
-        display: flex;
-        align-items: center;
-        padding: 5px;
-
-        &:hover {
-          background-color: #ece8ff;
-          border-radius: 5px;
-        }
-
-        .icon {
-          font-size: 18px;
-          color: #7451f8;
+        .link {
           display: flex;
-        }
+          align-items: center;
+          padding: 5px;
 
-        span {
-          font-size: 13px;
-          font-weight: 600;
-          color: #888;
-          margin-left: 10px;
+          &:hover {
+            background-color: #ece8ff;
+            border-radius: 5px;
+          }
+
+          .icon {
+            font-size: 18px;
+            color: #7451f8;
+            display: flex;
+          }
+
+          span {
+            font-size: 13px;
+            font-weight: 600;
+            color: #888;
+            margin-left: 10px;
+          }
         }
       }
     }
