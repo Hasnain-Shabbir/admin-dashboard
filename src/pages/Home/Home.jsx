@@ -1,5 +1,12 @@
 import React from "react";
-import { Sidebar, Navbar, Widget, Featured, Chart } from "../../components";
+import {
+  Sidebar,
+  Navbar,
+  Widget,
+  Featured,
+  Chart,
+  TableList,
+} from "../../components";
 import "./home.scss";
 
 const Home = () => {
@@ -17,6 +24,10 @@ const Home = () => {
         <div className="charts">
           <Featured />
           <Chart />
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transactions</div>
+          <TableList />
         </div>
       </div>
     </section>
