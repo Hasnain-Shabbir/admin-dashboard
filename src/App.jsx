@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { Home, List } from "./pages";
+import { Home, List, User } from "./pages";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -7,7 +7,10 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/users" element={<List />} />
+        <Route path="users">
+          <Route index element={<List />} />
+          <Route path=":userId" element={<User />} />
+        </Route>
       </Routes>
     </div>
   );
