@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Sidebar } from "../../components";
+import { Navbar, Sidebar, Datatable } from "../../components";
 import "./list.scss";
 
 const List = () => {
@@ -8,6 +8,7 @@ const List = () => {
       <Sidebar />
       <div className="listContainer">
         <Navbar />
+        <Datatable />
       </div>
     </div>
   );
